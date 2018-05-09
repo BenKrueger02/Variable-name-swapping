@@ -1,0 +1,37 @@
+def var_switcher():
+
+    choice = input('Switch numbers(1) or strings(2)?')
+
+    if choice == 1 or 2:
+        if choice == 1:
+            variable_one = input("Variable one is equal to: ")
+            variable_two = input("Variable two is equal to: ")
+
+            variable_one = (variable_one + variable_two)
+
+            variable_two = variable_one - variable_two
+
+            variable_one = variable_one - variable_two
+
+            print("Variable one is now " + str(variable_one) + "!!")
+            print("Variable two is now " + str(variable_two) + "!!")
+
+
+        if choice == 2:
+
+            var_one_string = input("Variable one is equal to: ")
+            var_two_string = input("Variable two is equal to: ")
+
+            var_one_string = (var_one_string + var_two_string)
+
+            var_two_string = var_one_string.replace(var_two_string, "")
+
+            var_one_string = var_one_string.replace(var_two_string,"")
+
+            print("Variable one is now " + str(var_one_string) + "!!")
+            print("Variable two is now " + str(var_two_string) + "!!")
+        else:
+            print('Input invalid. PLease Try again.')
+            var_switcher()
+
+var_switcher()
